@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+h1{
+    font-family:cursive ;}
+
+    h2{
+        font-style: italic;
+    }
+header {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header span {
+    font-size: 25px;
+    color: cadetblue;
+    text-decoration: underline;
+}
+
+
+main {
+    display: flex;
+    height: 92vh;
+}
+
+.ingredients-categories {
+    border: 1px solid black;
+    width: 40%;
+    padding: 30px 20px 20px;
+    overflow-y: auto;
+
+}
+
+.pizza-base {
+    border: 1px solid black;
+    width: 60%;
+    background-image: url(/img/img/background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ingredient-item {
+    display: inline-block;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ingredient-item img {
+    width: 60px;
+    height: 60px;
+}
+
+.ingredients-list {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: none;
+}
+
+.category-title {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+
+
+.category {
+    padding: 10px 5px;
+    margin-bottom: 35px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+.ingredients-categories, .ingredients-list {
+    scrollbar-width: thin;
+    scrollbar-color: #8a8a8a #f1f1f1;
+}
+
+.ingredients-categories::-webkit-scrollbar, .ingredients-list::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+}
+
+.ingredients-categories::-webkit-scrollbar-track, .ingredients-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.ingredients-categories::-webkit-scrollbar-thumb, .ingredients-list::-webkit-scrollbar-thumb {
+    background: #8a8a8a;
+    border-radius: 15px;
+    transition:  0.3s ease;
+}
+
+.ingredients-categories::-webkit-scrollbar-thumb:hover, .ingredients-list::-webkit-scrollbar-thumb:hover {
+    background: #666666;
+    
+} 
+
+.category:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pizza-ingredient-item {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+
+}
+
+.pizza-ingredient-item img {
+    width: 100%;
+    height: 100%;
+}
